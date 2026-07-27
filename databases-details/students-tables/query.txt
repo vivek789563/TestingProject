@@ -1,0 +1,25 @@
+create table students (
+id INT PRIMARY KEY, 
+First_Name VARCHAR(50) NOT NULL,
+Last_Name VARCHAR(50) NOT NULL,
+course_id INT,
+collage_id INT);
+----------------------------------------------------------
+insert into STUDENT_COURSE (COURSE_ID,COURSE_NAME) VALUES
+(6,'BCA'),
+(7,'B.COM');
+
+insert INTO STUDENTS (ID,FIRST_NAME,Last_Name,course_id,collage_id) values(1,'Vivek','Kumar',1,1);
+-----------------------------------------------------------
+
+SELECT * from STUDENT_COURSE;
+
+SELECT std.FIRST_NAME,std.LAST_NAME,course.COURSE_NAME from students std,STUDENT_COURSE course 
+where std.COURSE_ID=course.COURSE_ID;
+----------------------------------------------------------------
+DELETE from STUDENT_COURSE where COURSE_NAME='BCA';
+
+
+College table
+
+id, name,city
